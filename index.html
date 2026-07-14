@@ -95,6 +95,31 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
 .gallery img:hover{transform:scale(1.03) rotate(-1deg)}
 .story .frame figcaption{text-align:center;font-weight:800;margin-top:14px;color:var(--brown2)}
 
+/* CREPES */
+.crepes-sec{background:linear-gradient(160deg,#3C1A2E 0%,#5C2A42 50%,#3C2412 100%);color:var(--cream);padding:90px 6vw 110px}
+.crepes-sec .tag{background:rgba(255,120,160,.2);color:#FF8FAD}
+.crepes-sec h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:10px}
+.crepes-sec h2 .highlight{color:#FF8FAD}
+.crepes-sec .sub{color:#D8C0CC;font-size:1.05rem;line-height:1.8;max-width:580px;margin-bottom:50px}
+.crepes-layout{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:start}
+@media(max-width:860px){.crepes-layout{grid-template-columns:1fr}}
+.crepes-hero-img{width:100%;border-radius:24px;aspect-ratio:4/5;object-fit:cover;
+  box-shadow:0 30px 60px rgba(0,0,0,.4);transition:transform .5s}
+.crepes-hero-img:hover{transform:scale(1.02)}
+.crepes-menu{display:flex;flex-direction:column;gap:18px}
+.crepe-card{background:rgba(255,255,255,.07);border:1px solid rgba(255,143,173,.25);border-radius:20px;padding:26px 24px;transition:transform .3s,background .3s}
+.crepe-card:hover{transform:translateY(-4px);background:rgba(255,255,255,.12)}
+.crepe-card .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:8px}
+.crepe-card h3{font-size:1.08rem;color:#FF8FAD}
+.crepe-card .pr{font-weight:800;font-size:1.15rem;white-space:nowrap;color:var(--honey2)}
+.crepe-card p{color:#C8B0BC;font-size:.9rem;line-height:1.65}
+.crepe-card .pop{display:inline-block;margin-top:10px;background:#C4452B;color:#fff;font-size:11px;font-weight:800;padding:4px 12px;border-radius:20px}
+.crepes-gallery{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:50px}
+@media(max-width:640px){.crepes-gallery{grid-template-columns:1fr}}
+.crepes-gallery img{width:100%;height:280px;object-fit:cover;border-radius:20px;
+  box-shadow:0 14px 30px rgba(0,0,0,.35);transition:transform .5s}
+.crepes-gallery img:hover{transform:scale(1.03) rotate(-1deg)}
+
 /* VISIT */
 .visit{background:linear-gradient(180deg,var(--cream),#FBE7C4);padding:90px 6vw;text-align:center}
 .visit h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:16px}
@@ -121,6 +146,7 @@ footer{padding:38px 6vw;background:var(--brown);color:#C9B394;display:flex;justi
   <a class="logo" href="#top"><div class="ball"></div><b>Λουκουμάδες Κρεμαστή</b></a>
   <div class="nav-links">
     <a href="#menu">Μενού</a>
+    <a href="#crepes">Κρέπες</a>
     <a href="#story">Η Ιστορία μας</a>
     <a class="order" href="#visit">Παράγγειλε ☎</a>
   </div>
@@ -181,6 +207,47 @@ footer{padding:38px 6vw;background:var(--brown);color:#C9B394;display:flex;justi
         <p>25 λουκουμάδες με 3 σιρόπια της επιλογής σας. Ό,τι πρέπει για την παρέα ή το τραπέζι της Κυριακής.</p>
         <span class="pop">Value pack</span>
       </div>
+    </div>
+  </div>
+</section>
+
+<section class="crepes-sec" id="crepes">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag">Νέο στο Μενού</span>
+      <h2>Κρέπες Παγωτό<br><span class="highlight">«Μάλι της Γριας»</span></h2>
+      <p class="sub">Η κρέπα όπως την έφτιαχνε η γιαγιά — ζεστή, μαλακή, τυλιγμένη με αγάπη. Με παγωτό που λιώνει από πάνω, σοκολάτα που τρέχει και γεύση που δεν ξεχνιέται.</p>
+    </div>
+    <div class="crepes-layout rv">
+      <img class="crepes-hero-img"
+        src="https://d8j0ntlcm91z4.cloudfront.net/user_3FuCan21Moqq9F87YZSPqZ0TuU7/hf_20260714_181842_3f78d9c5-66e1-4fc6-8e4b-e3bc20c8f150.png"
+        alt="Κρέπα Παγωτό Μάλι της Γριας"
+        onerror="this.style.display='none'">
+      <div class="crepes-menu">
+        <div class="crepe-card">
+          <div class="top"><h3>Βανίλια & Σοκολάτα</h3><div class="pr">5,50€</div></div>
+          <p>Ζεστή κρέπα με μπάλα παγωτό βανίλια, ζεστή κουβερτούρα και τριμμένο καρύδι. Η κλασική επιλογή.</p>
+          <span class="pop">Το αγαπημένο</span>
+        </div>
+        <div class="crepe-card">
+          <div class="top"><h3>Φράουλα & Παγωτό</h3><div class="pr">5,50€</div></div>
+          <p>Κρέπα με παγωτό φράουλα, φρέσκες φράουλες και σάλτσα φρούτων. Γλυκιά σαν καλοκαίρι.</p>
+        </div>
+        <div class="crepe-card">
+          <div class="top"><h3>Τριπλή Σοκολάτα & Παγωτό</h3><div class="pr">6,00€</div></div>
+          <p>Κρέπα με παγωτό σοκολάτα, πραλίνα φουντουκιού και τριπλή σοκολάτα — για αληθινούς λάτρεις.</p>
+        </div>
+        <div class="crepe-card">
+          <div class="top"><h3>Μέλι, Καρύδι & Παγωτό</h3><div class="pr">5,00€</div></div>
+          <p>Ανθόμελο Ρόδου, τριμμένο καρύδι, κανέλα και παγωτό βανίλια. Σπιτική γεύση σε κάθε μπουκιά.</p>
+        </div>
+      </div>
+    </div>
+    <div class="crepes-gallery rv">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FuCan21Moqq9F87YZSPqZ0TuU7/hf_20260714_181844_6e2bdc15-cc47-4c81-b77e-cd8a88d55996.png"
+        alt="Κρέπες με παγωτό από ψηλά" onerror="this.style.display='none'">
+      <img src="https://d8j0ntlcm91z4.cloudfront.net/user_3FuCan21Moqq9F87YZSPqZ0TuU7/hf_20260714_181844_a00b74ff-cd35-45ce-8b5d-649a5ad86dbe.png"
+        alt="Κρέπα Μάλι της Γριας overhead" onerror="this.style.display='none'">
     </div>
   </div>
 </section>
