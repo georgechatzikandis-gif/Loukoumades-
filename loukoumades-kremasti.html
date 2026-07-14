@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="el">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Λουκουμάδες Κρεμαστή — Χειροποίητοι, ζεστοί, με μέλι</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#FFF4E0; --honey:#E8971E; --honey2:#F7B733; --brown:#3C2412; --brown2:#5C3A1E;
+  --red:#C4452B;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{background:var(--cream);color:var(--brown);font-family:'Nunito',sans-serif;overflow-x:hidden}
+h1,h2,h3{font-family:'Comfortaa',cursive;font-weight:700}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content:space-between;align-items:center;
+  padding:16px 6vw;background:rgba(255,244,224,.94);backdrop-filter:blur(8px);border-bottom:2px dashed rgba(232,151,30,.35)}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--brown)}
+.logo .ball{width:34px;height:34px;border-radius:50%;
+  background:radial-gradient(circle at 32% 28%,#F7C868,#D98A17 70%,#A96410);box-shadow:0 3px 6px rgba(60,36,18,.25)}
+.logo b{font-family:'Comfortaa',cursive;font-size:17px}
+.nav-links{display:flex;gap:26px;align-items:center}
+.nav-links a{color:var(--brown2);text-decoration:none;font-weight:800;font-size:14px;transition:color .3s}
+.nav-links a:hover{color:var(--honey)}
+.order{background:var(--honey);color:#fff!important;padding:10px 22px;border-radius:40px;box-shadow:0 4px 0 #B9720E}
+.order:hover{background:var(--honey2)}
+@media(max-width:760px){.nav-links a:not(.order){display:none}}
+
+/* HERO */
+.hero{min-height:100vh;display:flex;align-items:center;padding:120px 6vw 60px;position:relative;
+  background:radial-gradient(ellipse 60% 50% at 75% 40%,rgba(247,183,51,.30) 0%,transparent 65%),var(--cream)}
+.hero-grid{display:grid;grid-template-columns:1fr .95fr;gap:4vw;align-items:center;width:100%;max-width:1220px;margin:0 auto}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}}
+.rib{display:inline-block;background:var(--red);color:#fff;font-weight:800;font-size:13px;padding:8px 18px;
+  border-radius:30px;transform:rotate(-2deg);margin-bottom:22px;box-shadow:0 4px 0 #93301C}
+.hero h1{font-size:clamp(2.4rem,5.6vw,4.4rem);line-height:1.12;margin-bottom:22px}
+.hero h1 .melo{color:var(--honey);position:relative;display:inline-block}
+.hero p{color:var(--brown2);font-size:1.08rem;line-height:1.85;max-width:490px;margin-bottom:34px}
+.btn-row{display:flex;gap:14px;flex-wrap:wrap}
+.btn{padding:16px 32px;border-radius:50px;text-decoration:none;font-weight:800;font-size:15px;transition:all .25s}
+.btn-honey{background:var(--honey);color:#fff;box-shadow:0 5px 0 #B9720E}
+.btn-honey:hover{transform:translateY(-2px);box-shadow:0 7px 0 #B9720E}
+.btn-honey:active{transform:translateY(3px);box-shadow:0 2px 0 #B9720E}
+.btn-out{border:2px solid var(--brown);color:var(--brown)}
+.btn-out:hover{background:var(--brown);color:var(--cream)}
+
+/* HERO VIDEO */
+.scene{position:relative;display:flex;justify-content:center;align-items:center;min-height:440px}
+.hero-video-frame{position:relative;width:min(440px,88vw);border-radius:28px;overflow:hidden;
+  box-shadow:0 30px 60px rgba(60,36,18,.35), 0 0 0 10px #FFFDF7;transform:rotate(-1.5deg);
+  animation:framefloat 7s ease-in-out infinite}
+@keyframes framefloat{0%,100%{transform:rotate(-1.5deg) translateY(0)}50%{transform:rotate(-1.5deg) translateY(-10px)}}
+.hero-video-frame video{display:block;width:100%;height:auto;aspect-ratio:1/1;object-fit:cover}
+.video-tag{position:absolute;bottom:16px;left:16px;background:rgba(60,36,18,.85);color:var(--cream);
+  font-weight:800;font-size:13px;padding:9px 16px;border-radius:30px;backdrop-filter:blur(4px)}
+
+/* wave divider */
+.wave{display:block;width:100%;height:70px}
+
+/* MENU */
+.menu-sec{background:var(--brown);color:var(--cream);padding:90px 6vw 110px}
+.wrap{max-width:1220px;margin:0 auto}
+.tag{display:inline-block;background:rgba(247,183,51,.2);color:var(--honey2);font-weight:800;font-size:12px;
+  letter-spacing:2px;text-transform:uppercase;padding:7px 16px;border-radius:30px;margin-bottom:16px}
+.menu-sec h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:50px}
+.menu-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px}
+.dish-card{background:rgba(255,244,224,.06);border:1px solid rgba(247,183,51,.25);border-radius:20px;
+  padding:30px 26px;transition:transform .3s,background .3s}
+.dish-card:hover{transform:translateY(-6px);background:rgba(255,244,224,.1)}
+.dish-card .top{display:flex;justify-content:space-between;align-items:baseline;gap:14px;margin-bottom:10px}
+.dish-card h3{font-size:1.1rem;color:var(--honey2)}
+.dish-card .pr{font-weight:800;font-size:1.2rem;white-space:nowrap}
+.dish-card p{color:#D8C8B0;font-size:.92rem;line-height:1.7}
+.dish-card .pop{display:inline-block;margin-top:12px;background:var(--red);color:#fff;font-size:11px;
+  font-weight:800;padding:4px 12px;border-radius:20px}
+
+/* STORY */
+.story{padding:100px 6vw;display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center;max-width:1220px;margin:0 auto}
+@media(max-width:860px){.story{grid-template-columns:1fr}}
+.story h2{font-size:clamp(1.8rem,3.4vw,2.6rem);margin-bottom:22px}
+.story p{color:var(--brown2);line-height:1.9;margin-bottom:16px;font-size:1.02rem}
+.story .frame{background:#fff;border-radius:24px;padding:26px;box-shadow:0 18px 40px rgba(60,36,18,.15);transform:rotate(2deg)}
+.story .frame .ph-img{border-radius:16px;height:320px;width:100%;object-fit:cover;display:block;
+  animation:phzoom 14s ease-in-out infinite alternate}
+@keyframes phzoom{from{object-position:50% 35%}to{object-position:50% 65%}}
+/* gallery strip */
+.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1220px;margin:0 auto;padding:0 6vw 90px}
+@media(max-width:760px){.gallery{grid-template-columns:1fr}}
+.gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;box-shadow:0 14px 30px rgba(60,36,18,.18);
+  transition:transform .5s}
+.gallery img:hover{transform:scale(1.03) rotate(-1deg)}
+.story .frame figcaption{text-align:center;font-weight:800;margin-top:14px;color:var(--brown2)}
+
+/* VISIT */
+.visit{background:linear-gradient(180deg,var(--cream),#FBE7C4);padding:90px 6vw;text-align:center}
+.visit h2{font-size:clamp(1.9rem,4vw,3rem);margin-bottom:16px}
+.visit p{color:var(--brown2);max-width:520px;margin:0 auto 30px;line-height:1.8}
+.visit .cards{display:flex;gap:20px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.v-card{background:#fff;border-radius:20px;padding:28px 34px;box-shadow:0 12px 30px rgba(60,36,18,.12);min-width:240px}
+.v-card .lbl{font-size:11px;font-weight:800;letter-spacing:2px;text-transform:uppercase;color:var(--honey);margin-bottom:8px}
+.v-card .val{font-weight:800;font-size:1.05rem}
+
+footer{padding:38px 6vw;background:var(--brown);color:#C9B394;display:flex;justify-content:space-between;
+  flex-wrap:wrap;gap:14px;font-size:.85rem}
+
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s,transform .8s}
+.rv.on{opacity:1;transform:none}
+@media (prefers-reduced-motion: reduce){
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#top"><div class="ball"></div><b>Λουκουμάδες Κρεμαστή</b></a>
+  <div class="nav-links">
+    <a href="#menu">Μενού</a>
+    <a href="#story">Η Ιστορία μας</a>
+    <a class="order" href="#visit">Παράγγειλε ☎</a>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="hero-grid">
+    <div>
+      <div class="rib">Φτιάχνονται τη στιγμή που τους παραγγέλνεις!</div>
+      <h1>Ζεστοί λουκουμάδες,<br>με <span class="melo">μέλι</span> που στάζει.</h1>
+      <p>Στην καρδιά της Κρεμαστής, τηγανίζουμε λουκουμάδες όπως τους έφτιαχνε η γιαγιά — τραγανοί απ' έξω, αφράτοι από μέσα, πνιγμένοι στο μέλι και την κανέλα. Έλα να τους δοκιμάσεις όσο καίνε ακόμα.</p>
+      <div class="btn-row">
+        <a class="btn btn-honey" href="#menu">Δες το Μενού</a>
+        <a class="btn btn-out" href="#visit">Πώς θα μας βρεις</a>
+      </div>
+    </div>
+    <div class="scene">
+      <div class="hero-video-frame">
+        <video autoplay muted loop playsinline preload="auto" poster="">
+          <source src="hero-chocolate.mp4" type="video/mp4">
+        </video>
+        <div class="video-tag">Φτιάχνονται μπροστά σου 🍫</div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<section class="menu-sec" id="menu">
+  <div class="wrap">
+    <div class="rv">
+      <span class="tag">Το Μενού</span>
+      <h2>Διάλεξε τη μερίδα σου</h2>
+    </div>
+    <div class="menu-grid">
+      <div class="dish-card rv">
+        <div class="top"><h3>Οι Κλασικοί</h3><div class="pr">4,50€</div></div>
+        <p>Μέλι, κανέλα και τριμμένο καρύδι. Η συνταγή που δεν αλλάζει ποτέ — και δεν χρειάζεται.</p>
+        <span class="pop">Το αγαπημένο σας</span>
+      </div>
+      <div class="dish-card rv">
+        <div class="top"><h3>Πραλίνα & Παγωτό</h3><div class="pr">6,00€</div></div>
+        <p>Ζεστοί λουκουμάδες με πραλίνα φουντουκιού και μια μπάλα παγωτό βανίλια που λιώνει από πάνω.</p>
+      </div>
+      <div class="dish-card rv">
+        <div class="top"><h3>Με Μαστίχα Χίου</h3><div class="pr">5,50€</div></div>
+        <p>Σιρόπι μαστίχας και λευκή σοκολάτα — η πιο αρωματική εκδοχή του μενού μας.</p>
+      </div>
+      <div class="dish-card rv">
+        <div class="top"><h3>Αλμυροί με Φέτα</h3><div class="pr">5,50€</div></div>
+        <p>Για τους τολμηρούς: λουκουμάδες με φέτα, μέλι και σουσάμι. Γλυκό & αλμυρό σε τέλεια ισορροπία.</p>
+      </div>
+      <div class="dish-card rv">
+        <div class="top"><h3>Σοκολάτα Τριπλή</h3><div class="pr">6,00€</div></div>
+        <p>Κουβερτούρα, γάλακτος και λευκή σοκολάτα μαζί. Για μοίρασμα... θεωρητικά.</p>
+      </div>
+      <div class="dish-card rv">
+        <div class="top"><h3>Οικογενειακή Μερίδα</h3><div class="pr">12,00€</div></div>
+        <p>25 λουκουμάδες με 3 σιρόπια της επιλογής σας. Ό,τι πρέπει για την παρέα ή το τραπέζι της Κυριακής.</p>
+        <span class="pop">Value pack</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="story" id="story">
+  <div class="rv">
+    <span class="tag" style="background:rgba(232,151,30,.15);color:var(--honey)">Η Ιστορία μας</span>
+    <h2>Μια συνταγή,<br>τρεις γενιές.</h2>
+    <p>Όλα ξεκίνησαν από ένα τηγάνι στην αυλή, τα πανηγύρια του χωριού και μια ζύμη που ήθελε υπομονή. Σήμερα, στο μαγαζί μας στην Κρεμαστή, κρατάμε την ίδια συνταγή: προζύμι που ωριμάζει αργά, φρέσκο λάδι κάθε μέρα, και μέλι από ντόπιους παραγωγούς της Ρόδου.</p>
+    <p>Κάθε μερίδα τηγανίζεται τη στιγμή της παραγγελίας. Γι' αυτό οι λουκουμάδες μας φτάνουν στο τραπέζι σου ζεστοί, τραγανοί και αχνιστοί — ποτέ από τον πάγκο.</p>
+  </div>
+  <figure class="frame rv">
+    <img class="ph-img" src="https://images.unsplash.com/photo-1551106652-a5bcf4b29ab6?auto=format&fit=crop&w=800&q=80" alt="Λουκουμάδες με μέλι" onerror="this.style.display='none'">
+    <figcaption>Φτιαγμένοι με το χέρι, ένας-ένας.</figcaption>
+  </figure>
+</section>
+
+<div class="gallery">
+  <img class="rv" src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80" alt="Μέλι" onerror="this.style.display='none'">
+  <img class="rv" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Γλυκό με σιρόπι" onerror="this.style.display='none'">
+  <img class="rv" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Καφές" onerror="this.style.display='none'">
+</div>
+
+<section class="visit" id="visit">
+  <div class="rv">
+    <span class="tag" style="background:rgba(232,151,30,.15);color:var(--honey)">Έλα να μας βρεις</span>
+    <h2>Σε περιμένουμε στην Κρεμαστή</h2>
+    <p>Δίπλα στην κεντρική πλατεία. Παράγγειλε τηλεφωνικά για παραλαβή — οι λουκουμάδες σε περιμένουν ζεστοί.</p>
+    <div class="cards">
+      <div class="v-card"><div class="lbl">Διεύθυνση</div><div class="val">Κρεμαστή, Ρόδος 851 04</div></div>
+      <div class="v-card"><div class="lbl">Τηλέφωνο</div><div class="val">22410 00000</div></div>
+      <div class="v-card"><div class="lbl">Ωράριο</div><div class="val">Καθημερινά 17:00 – 00:30</div></div>
+    </div>
+    <div style="margin-top:34px">
+      <a class="btn btn-honey" href="tel:2241000000">☎ Παράγγειλε Τώρα</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div>© 2026 Λουκουμάδες Κρεμαστή — Ρόδος</div>
+  <div>Demo κατασκευή: Greek Web Hub</div>
+</footer>
+
+<script>
+(function(){
+  var obs = new IntersectionObserver(function(entries){
+    entries.forEach(function(en){
+      if(en.isIntersecting){ en.target.classList.add('on'); obs.unobserve(en.target); }
+    });
+  }, {threshold:.12});
+  document.querySelectorAll('.rv').forEach(function(el){ obs.observe(el); });
+})();
+</script>
+</body>
+</html>
