@@ -88,9 +88,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;justify-content
   animation:phzoom 14s ease-in-out infinite alternate}
 @keyframes phzoom{from{object-position:50% 35%}to{object-position:50% 65%}}
 /* gallery strip */
-.gallery{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:1220px;margin:0 auto;padding:0 6vw 90px}
-@media(max-width:760px){.gallery{grid-template-columns:1fr}}
-.gallery img{width:100%;height:260px;object-fit:cover;border-radius:20px;box-shadow:0 14px 30px rgba(60,36,18,.18);
+.gallery{max-width:800px;margin:0 auto;padding:0 6vw 90px}
+.gallery img{width:100%;height:320px;object-fit:cover;border-radius:20px;box-shadow:0 14px 30px rgba(60,36,18,.18);
   transition:transform .5s}
 .gallery img:hover{transform:scale(1.03) rotate(-1deg)}
 .story .frame figcaption{text-align:center;font-weight:800;margin-top:14px;color:var(--brown2)}
@@ -295,8 +294,6 @@ footer{padding:38px 6vw;background:var(--brown);color:#C9B394;display:flex;justi
 
 <div class="gallery">
   <img class="rv" src="https://images.unsplash.com/photo-1587049352846-4a222e784d38?auto=format&fit=crop&w=800&q=80" alt="Μέλι" onerror="this.style.display='none'">
-  <img class="rv" src="https://images.unsplash.com/photo-1563805042-7684c019e1cb?auto=format&fit=crop&w=800&q=80" alt="Γλυκό με σιρόπι" onerror="this.style.display='none'">
-  <img class="rv" src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=800&q=80" alt="Καφές" onerror="this.style.display='none'">
 </div>
 
 <section class="visit" id="visit">
